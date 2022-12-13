@@ -1,0 +1,23 @@
+{
+  "name": "clone-devto-backend",
+  "version": "1.0.0",
+  "description": "Desafio DevTo BackEnd",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandromartinezcs/devtobackend_js22.git"
+  },
+  "keywords": [
+    "devtoClone",
+    "KodemiaJs22"
+  ],
+  "author": "Alejandro Martínez | Grace sANCHEZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alejandromartinezcs/devtobackend_js22/issues"
+  },
+  "homepage": "https://github.com/alejandromartinezcs/devtobackend_js22#readme"
+}

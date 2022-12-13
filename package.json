@@ -4,7 +4,8 @@
   "description": "Desafio DevTo BackEnd",
   "main": "index.js",
   "scripts": {
-    "test": "npm run dev"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -14,10 +15,20 @@
     "devtoClone",
     "KodemiaJs22"
   ],
-  "author": "Alejandro Martínez | Grace sANCHEZ",
+  "author": "Alejandro Martínez | Grace Sanchez",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alejandromartinezcs/devtobackend_js22/issues"
   },
-  "homepage": "https://github.com/alejandromartinezcs/devtobackend_js22#readme"
+  "homepage": "https://github.com/alejandromartinezcs/devtobackend_js22#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }

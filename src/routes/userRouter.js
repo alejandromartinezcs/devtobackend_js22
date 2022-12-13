@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { create, authenticate, getById } = require("../usecases/user");
+const { create, authenticate, getById } = require("../usescases/user");
 const { authHandler } = require("../middlewares/authHandler");
 
 const routes = Router();

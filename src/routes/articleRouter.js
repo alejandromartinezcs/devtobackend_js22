@@ -7,7 +7,6 @@ router.get("/", async (req, res) => {
     const article = await articleUsesCases.getAll();
     res.json({ ok: true, payload: article });
   } catch (error) {
-    console.log(error);
     res.status(400).json({ ok: false, message: error });
   }
 });

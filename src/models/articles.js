@@ -5,7 +5,8 @@ const schema = new Schema({
   title: { type: String, required: true, trim: true },
   article: { type: String, trim: true },
   user: { type: mongoose.ObjectId, ref: "User"},
-  date: { type: Date, trim: true }
+  date: { type: Date, trim: true },
+  img: { data:Buffer, contentType: String }
 });
 
 const model = mongoose.model("Task", schema);

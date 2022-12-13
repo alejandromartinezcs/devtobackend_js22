@@ -7,9 +7,9 @@ const routes = Router();
 routes.get("/", authHandler, async (req, res) => {
   const id = req.params.token.sub;
 
-  const { email, firstName } = await getById(id);
+  const { email, username } = await getById(id);
 
-  res.json({ ok: true, payload: { email, firstName } });
+  res.json({ ok: true, payload: { email, username } });
 });
 
 routes.post("/", async (req, res) => {

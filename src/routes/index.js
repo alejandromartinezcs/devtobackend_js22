@@ -3,7 +3,7 @@ const articleRouter = require("./articleRouter");
 
 const apiRouter = (app) => {
     app.use("/users", usersRouter);
-    app.use("/article", articleRouter);
+    app.use("/articles", articleRouter);
 };
 
 module.exports = apiRouter;

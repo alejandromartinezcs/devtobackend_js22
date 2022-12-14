@@ -41,13 +41,11 @@ routes.put("/", (req, res) => {
 });
 
 routes.put("/:id", (req, res) => {
-  // Lógica para editar el usuario con el id X
 
   res.json({ message: `Usuario con el id ${req.params.id} modificado` });
 });
 
 routes.delete("/:id", (req, res) => {
-  // Logica para eliminar el usuario con el id X
 
   res.json({ message: `Usuario con el id ${req.params.id} eliminado` });
 });

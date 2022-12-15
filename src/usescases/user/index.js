@@ -2,6 +2,7 @@ const User = require("../../models/user").model;
 const { hashPassword, verifyPassword } = require("../../lib/encrypt");
 const { createToken, verifyToken } = require("../../lib/jwt");
 
+
 const create = async (data) => {
   const { email, password, username, img } = data;
 
@@ -24,7 +25,7 @@ const authenticate = async (email, password) => {
   const hash = user.password;
 
   const isVerified = await verifyPassword(password, hash);
-  if (!isVerified) throw new Error("Wrong password");
+  if (!isVerified) throw new Error("Password Incorrecto");
   return createToken({ sub: user._id });
 };
 

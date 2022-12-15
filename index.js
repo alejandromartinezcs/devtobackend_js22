@@ -5,6 +5,7 @@ const { logErrors, errorHandler } = require ("./src/middlewares/errorHandler");
 const config = require("./src/lib/config");
 const db = require("./src/lib/db");
 
+
 app.use(express.json());
 apiRouter(app);
 

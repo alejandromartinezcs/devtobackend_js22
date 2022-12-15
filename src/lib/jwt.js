@@ -1,12 +1,8 @@
-const { hash, compare } = require("bcrypt");
+const { sign, verify } = require("jsonwebtoken");
+const { app } = require("./config");
 
-const hashPassword = async (password) => {
-  return await hash(password, 10);
-};
+const createToken = (payload) => sign(payload, app.secret, { expiresIn: "1h" });
 
-const verifyPassword = async (password, hash) => {
-  const compareResult = await compare(password, hash);
-  return compareResult;
-};
+const verifyToken = (token) => verify(token, app.secret);
 
-module.exports = { hashPassword, verifyPassword };
+module.exports = { createToken, verifyToken };

@@ -27,24 +27,22 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const { title } = req.body.title;
-  const { article } = req.body.article;
-  const { user } = req.body.user;
-  // const { date } = req.body.date;
+  const { title, article } = req.body;
 
   try {
-    const payload = await articleUsesCases.create(title, article, user);
-    res.json({
-      ok: true,
-      message: "Article created successfully",
-      payload,
-    });
+    const post = await articleUsesCases.create({title, article });
+    const payload = {
+      name: post.title,
+      article: post.article
+    };
+    res.status(201).json({
+      ok: true, 
+      payload})
   } catch (error) {
     res.status(400).json({
       ok: false,
       message: error,
     });
-    console.log(error);
   }
 });
 

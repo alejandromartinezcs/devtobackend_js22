@@ -6,9 +6,12 @@ const getAll = async () => {
 
 const getById = async (id) => await Taks.findById(id).exec();
 
-const create = async (title) => {
-  const article = new Article({ title });
-  return await article.save();
+const create = async ( data ) => {
+  const { title, article } = data;
+  
+  const post = new Article ({ title, article})
+
+  return await post.save();
 
 };
 

@@ -46,6 +46,20 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const { title, article } = req.body;
+
+  try {
+    const data = { title, article };
+    const articles = await articleUsesCases.update(id, data);
+    res.json({ ok: true, payload: articles });
+  } catch (error) {
+    const { message } = error;
+    res.status(400).json({ ok: false, message });
+  }
+});
+
 router.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params;

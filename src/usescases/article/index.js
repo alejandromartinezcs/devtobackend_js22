@@ -23,7 +23,8 @@ const update = async (id, data) => {
   data.user = user ? user : data.user;
   data.date = date ? date : data.date;
 
-  return await article.findByIdAndUpdate(id, data).exec();
+  return await Article.findByIdAndUpdate(id, data).exec();
+
 };
 
 const del = async (id) => await Article.findByIdAndDelete(id).exec();

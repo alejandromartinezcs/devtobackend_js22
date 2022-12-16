@@ -2,6 +2,7 @@
 
 const router = require("express").Router();
 const articleUsesCases = require("../usescases/article");
+const { authHandler } = require("../middlewares/authHandler");
 
 router.get("/", async (req, res) => {
   try {
@@ -45,6 +46,7 @@ router.post("/", async (req, res) => {
     });
   }
 });
+
 
 router.put("/:id", async (req, res) => {
   const { id } = req.params;

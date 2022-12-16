@@ -4,7 +4,7 @@ const getAll = async () => {
   return await Article.find({}).exec();
 };
 
-const getById = async (id) => await Taks.findById(id).exec();
+const getById = async (id) => await Article.findById(id).exec();
 
 const create = async ( data ) => {
   const { title, article } = data;

@@ -1,5 +1,5 @@
 const environment = {
-    urlDb: 'https://kodemiadevto-default-rtdb.firebaseio.com'
+    urlDb: 'http://localhost:8000/'
 };
 
 export default environment;

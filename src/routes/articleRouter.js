@@ -46,4 +46,17 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.delete("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, article } = await articleUsesCases.del(id);
+
+    res.json({ ok: true, payload: { title, article } });
+  } catch (error) {
+    const { message } = error;
+    res.status(400).json({ ok: false, message });
+  }
+});
+
+
 module.exports = router;
